@@ -3,28 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Protect Insurance - Quote</title>
-
- <script>
-  document.getElementById("quoteButton").addEventListener("click", function() {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "quote_button_click",
-      button_name: "Request Quote",
-      debug_mode: true // This forces the event into GA4 DebugView
-    });
-  });
-</script>
-
-
 </head>
 <body>
- <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX5RLWMX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX5RLWMX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <h1>Get a Quote</h1>
   <p>Welcome to Protect Insurance. Click below to request a quote.</p>
   <button id="quoteButton">Request Quote</button>
+
+  <!-- ✅ JavaScript added AFTER the button -->
+  <script>
+    document.getElementById("quoteButton").addEventListener("click", function() {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "quote_button_click",
+        button_name: "Request Quote",
+        debug_mode: true
+      });
+    });
+  </script>
 </body>
 </html>
+
 
