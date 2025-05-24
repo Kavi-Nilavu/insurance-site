@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <title>Protect Insurance - Quote</title>
 
-  <script>
+ <script>
   document.getElementById("quoteButton").addEventListener("click", function() {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: "quote_button_click",
-      button_name: "Request Quote"
+      button_name: "Request Quote",
+      debug_mode: true // This forces the event into GA4 DebugView
     });
   });
 </script>
+
 
 </head>
 <body>
